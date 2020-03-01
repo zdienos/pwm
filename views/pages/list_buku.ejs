@@ -1,0 +1,50 @@
+<div class="continer mt-3">
+    <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8">
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="d-inline">List Buku</h5>
+                    <a class="btn btn-primary btn-sm float-right" href="/create_buku">Tambah</a>
+                    <button id="say-hello">Hello</button>
+                </div>
+                <div class="card-body">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Judul</th>
+                                <th scope="col">Keterangan</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% buku.forEach(function(buku){ %>
+                            <tr>
+                                <th scope="row"><%= buku.id %></th>
+                                <td><%= buku.judul %></td>
+                                <td><%= buku.keterangan %></td>
+                                <td>
+                                    <a href="" class="btn btn-primary btn-sm">Edit</a>
+                                    <a href="" class="btn btn-danger btn-sm">Hapus</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer text-muted">
+                    Footer
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+</div>
