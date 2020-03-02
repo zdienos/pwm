@@ -61,15 +61,20 @@ $('#get_qr').click(function () {
 
 });
 
+$('#chat').click(function () {
+
+});
+
 io.socket.on('qr', function (data) {
   $('#qr').html('');
   console.log(data);
-  
+
   if (data.qr) {
     generateQr(data.qr);
-  }else{
+  } else {
     $('#qr').html(data.msg);
+    location.reload(true);
   }
-  
+
   $(".fa-spinner").addClass("d-none");
 })

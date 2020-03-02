@@ -1,5 +1,5 @@
 /**
- * QrController
+ * LoginController
  *
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
@@ -21,12 +21,17 @@ session = async () => {
 }
 
 module.exports = {
-    show: async function (req, res) {
+
+    index: async function (req, res) {
         let ses = await session();
-        res.view("pages/wa", { session: ses, active: 'login' });
+        res.view("pages/login", {
+            session: ses,
+            active: 'login',
+            javascript: '<script src="/js/login.js"></script>'
+        });
     },
 
-    getQr: async function (req, res) {
+    get_qr: async function (req, res) {
         if (!req.isSocket) {
             return res.badRequest();
         }
@@ -78,48 +83,5 @@ module.exports = {
         });
     },
 
-    chat: async function (req, res) {
-        let ses = await session();
-        if (ses == undefined) {
-            res.redirect('/qr_wa');
-            throw 'undefined';
-        }
-        
-        res.view("pages/chat");
-
-    },
-
-    sendChat: async function (req, res) {
-        let data = req.body;
-        let no = data.no;
-        let chat = data.chat;
-        let kode_negara = Number(no.substring(0, 2));
-
-        if (kode_negara !== 62) {
-            return res.json({
-                data: 'Awal No Harus 62'
-            });
-        }
-
-        if (chat == '') {
-            return res.json({
-                data: 'Chat tidak Boleh Kosong'
-            });
-        }
-
-        no = no + '@c.us';
-
-        let ses = await session();
-        const client = new Client({ puppeteer: { headless: false }, session: ses });
-       
-        try {
-            await client.sendMessage('628992141874', '.........');
-        } catch (error) {
-            console.log(error);
-        }
-
-        return res.json({
-            data: 'Chat tidak Boleh Kosong'
-        });
-    }
 };
+

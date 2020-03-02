@@ -19,13 +19,16 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
+  '/':'HomeController.index',
   '/list_buku': 'BukuController.list_buku',
   'GET /create_buku': 'BukuController.create_buku',
   'POST /store_buku': 'BukuController.store_buku',
 
-  'GET /qr_wa': 'QrController.show',
-  'GET /get_qr': 'QrController.getQr',
+  'GET /login': 'LoginController.index',
+  'GET /get_qr': 'LoginController.get_qr',
+
+  'GET /contacts': 'ContactsController.index',
+  'GET /get_contacts': 'ContactsController.get_contacts',
 
 
   /***************************************************************************

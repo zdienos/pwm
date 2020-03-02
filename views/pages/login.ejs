@@ -1,0 +1,42 @@
+<div class="continer mt-3">
+    <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8">
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="d-inline" id="title">LOGIN TO WA</h5>
+                    <% if (session == undefined) { %>
+                        <button id="get_qr" class="btn btn-primary btn-sm float-right">
+                            <i class="fas fa-spinner fa-spin d-none"></i>
+                            GET QR
+                        </button>
+                    <% } else {%>
+                        <a id="chat" class="btn btn-primary btn-sm float-right" href="/chat_wa">
+                            <i class="fas fa-mail-bulk"></i>
+                            Send Chat
+                        </a>
+                    <% }%>
+                    
+                </div>
+                <div class="card-body">
+                    <div id="qr" class="d-flex justify-content-center">
+                        <% if (session !== undefined) { %>
+                           <p>Whatsapp is Ready</p>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+</div>

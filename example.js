@@ -39,9 +39,9 @@ client.on('auth_failure', msg => {
 client.on('ready', () => {
     console.log('READY');
 
-    setTimeout(function () {
-        client.sendMessage('628992141874@c.us', 'Chat Boot Ready');
-    }, 5000);
+    // setTimeout(function () {
+    //     client.sendMessage('628992141874@c.us', 'Chat Boot Ready');
+    // }, 5000);
     
 });
 

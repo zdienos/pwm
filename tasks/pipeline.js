@@ -76,8 +76,7 @@ var jsFilesToInject = [
   'js/**/jquery-3.2.1.slim.min.js',
   'js/**/popper.min.js',
   'js/**/bootstrap.min.js',
-  'js/**/jquery-qrcode-0.17.0.min.js',
-  'js/**/wa.js'
+  'js/**/jquery-qrcode-0.17.0.min.js'
 ];
 
 

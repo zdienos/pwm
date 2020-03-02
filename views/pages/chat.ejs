@@ -1,0 +1,31 @@
+<div class="continer mt-3">
+    <div class="row">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-8">
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="d-inline">WA CHAT</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/send_chat">
+                        <input type="hidden" name="_csrf" value="<%- _csrf %>" />
+                        <input type="number" class="form-control" name="no" value="628992141874">
+                        <textarea class="form-control my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="chat"></textarea>
+                        <button type="submit" class="btn btn-primary my-1">Submit</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+</div>
