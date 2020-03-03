@@ -20,11 +20,11 @@ Halaman Login
   
 ![Halaman login PWM](/assets/images/login.png "Halaman login PWM" )
 
-Login Beghasil
+Login Berhasil
 
 ![Halaman login PWM](/assets/images/login-berhasil.png "Halaman login PWM")
 
-Halam Kontak
+Halaman Kontak
 
 ![Halaman login PWM](/assets/images/kontak.png "Halaman login PWM")
 
