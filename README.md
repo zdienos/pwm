@@ -12,7 +12,21 @@
 ### Instalasi
 - `git Clone https://github.com/kurob1993/pwm.git`
 - `npm install`
-- `sails liftt`
+- `sails lift`
+
+### Tangkapan Layar
+
+Halaman Login
+  
+![Halaman login PWM](/assets/images/login.png "Halaman login PWM" )
+
+Login Beghasil
+
+![Halaman login PWM](/assets/images/login-berhasil.png "Halaman login PWM")
+
+Halam Kontak
+
+![Halaman login PWM](/assets/images/kontak.png "Halaman login PWM")
 
 ### Info
 ---
