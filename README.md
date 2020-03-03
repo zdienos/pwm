@@ -1,26 +1,20 @@
-# belajar-sails
+# PWM (Programmatic Whatsapp Messenger)
+## __Tool WhatsApp Blaster & Marketing Unlimited.__
 
-a [Sails v1](https://sailsjs.com) application
+### Fitur
 
+|No|Deskripsi|Ket|
+|--|-----|---|
+|1.| Login Menggunakan QR Code |✅|
+|2.| Download Kontak |✅|
+|3.| Blasting Chat |❌|
 
-### Links
+### Instalasi
+- `git Clone https://github.com/kurob1993/pwm.git`
+- `npm install`
+- `sails liftt`
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
-
-
-### Version info
-
-This app was originally generated on Wed Feb 19 2020 21:00:42 GMT+0700 (GMT+07:00) using Sails v1.2.3.
-
-<!-- Internally, Sails used [`sails-generate@1.16.13`](https://github.com/balderdashy/sails-generate/tree/v1.16.13/lib/core-generators/new). -->
-
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+### Info
+---
+PWM tidak berafiliasi dengan WhatsApp, Facebook, atau mitra pihak ketiga mana pun dengan cara apa pun. Merupakan tanggung jawab Anda sepenuhnya untuk mematuhi peraturan WhatsApp dan undang-undang apa pun yang Anda ikuti. Anda menggunakan perangkat lunak kami dengan risiko Anda sendiri. Kami percaya tanggung jawab adalah milik Anda sendiri dan kami tidak bertanggung jawab atas tindakan Anda dan konsekuensinya. Kami tidak dapat disalahkan dalam kasus akun Anda kemungkinan akan diblokir karena alasan apa pun. Tidak ada jaminan pengoperasian perangkat lunak yang berkelanjutan, tanpa gangguan atau bebas kesalahan.
 
