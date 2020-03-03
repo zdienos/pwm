@@ -38,7 +38,7 @@ module.exports = {
         sails.sockets.join(req, 'qrSockets');
 
         let ses = await session();
-        const client = new Client({ puppeteer: { headless: false }, session: ses });
+        const client = new Client({ puppeteer: { headless: true }, session: ses });
         client.initialize();
 
         client.on('qr', (qr) => {

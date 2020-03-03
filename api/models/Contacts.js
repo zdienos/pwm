@@ -8,9 +8,15 @@
 module.exports = {
 
   attributes: {
-    contact: {
-      type: 'json'
-    }
+    server: {
+      type: 'string'
+    },
+    number: {
+      type: 'string'
+    },
+    name: {
+      type: 'string'
+    },
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗

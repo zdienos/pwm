@@ -24,14 +24,20 @@ module.exports = {
     index: async function (req, res) {
         let ses = await session();
         if (ses) {
-            let contacts = await Contacts.find({});
+            let page = req.query.page;
+            let perPage = 15;
+            if(req.query.page == 0 || req.query.page < 0 || req.query.page == undefined){
+                page = 1
+            }
 
-            let myJSON = JSON.stringify(contacts);
-            let obj = JSON.parse(myJSON);
+            let contacts = await Contacts.find({}).sort('name ASC').limit(perPage).skip( (page - 1) * perPage);
+            let count = await Contacts.count({});
 
             res.view('pages/contacts', { 
                 active: 'contact', 
-                data: obj,
+                contacts: contacts,
+                current: page,
+                pages: Math.ceil(count/perPage),
                 javascript: '<script src="/js/contacts.js"></script>'
             });
         } else {
@@ -48,20 +54,28 @@ module.exports = {
         let ses = await session();
         const client = new Client({ puppeteer: { headless: true }, session: ses });
         await client.initialize();
-        
-        await Contacts.destroy({});
-        let contacts = await client.getContacts();
-        for (let index = 0; index < contacts.length; index++) {
-            const element = contacts[index];
-            console.log(element);
-            await Contacts.create({ contact: element }).exec(function (err) {
-                if (err) {
-                    console.log(error);
+
+        let contact = await client.getContacts();
+        for (let index = 0; index < contact.length; index++) {
+            
+            const element = contact[index];
+            let myJSON = JSON.stringify(element);
+            let obj = JSON.parse(myJSON);
+
+            if (obj.number !== null) {
+                let one = await Contacts.findOne({ server: obj.id.server, number: obj.number, name: obj.name });
+                if(one == undefined){
+                    await Contacts.create({ server: obj.id.server, number: obj.number, name: obj.name });
                 }
-            });
+            }
+
         }
-        client.destroy();
+
+        await client.destroy();
         sails.sockets.broadcast('contactsSockets', 'contacts', { contacts: 'ok' });
+        return res.json({
+            return: 'ok'
+        });
     }
 };
 
